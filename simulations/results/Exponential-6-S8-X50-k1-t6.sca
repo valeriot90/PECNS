@@ -1,0 +1,436 @@
+version 2
+run Exponential-326-20161215-08:37:29-5476
+attr X 50
+attr configname Exponential
+attr datetime 20161215-08:37:29
+attr experiment Exponential
+attr inifile omnetpp.ini
+attr iterationvars "$k=1, $t=6, $switchTime=8, $X=50"
+attr iterationvars2 "$k=1, $t=6, $switchTime=8, $X=50, $repetition=6"
+attr k 1
+attr measurement "$k=1, $t=6, $switchTime=8, $X=50"
+attr network AerocomSystem
+attr processid 5476
+attr repetition 6
+attr replication #6
+attr resultdir results
+attr runnumber 326
+attr seedset 6
+attr switchTime 8
+attr t 6
+param **.N 50
+param **.numberOfServers 5
+param **.targetCapacity "uniform(100bps, 2000bps, 0)"
+param AerocomSystem.airCraft[*].router.X "${X=10, 30, 50}"
+param AerocomSystem.airCraft[*].router.switchTime "${switchTime=0..10 step 2}s"
+param AerocomSystem.airCraft[*].server[*].t "exponential(${t=0.5, 6, 50}s, 2)"
+param AerocomSystem.airCraft[*].source.k "exponential(${k=1, 6, 12}s, 1)"
+param AerocomSystem.airCraft[*].source.packetSize 1024b
+
+scalar . 	X 	50
+scalar . 	k 	1
+scalar . 	switchTime 	8
+scalar . 	t 	6
+scalar AerocomSystem.airCraft[0].fifo 	queueLength:max 	88
+attr title  "Statistic about queue's length, max"
+scalar AerocomSystem.airCraft[0].fifo 	queueLength:mean 	48.495859213251
+attr title  "Statistic about queue's length, mean"
+scalar AerocomSystem.airCraft[0].router 	numSwitch:sum 	11
+attr title  "Number of switch operation, sum"
+scalar AerocomSystem.airCraft[0].router 	queuingTime:mean 	49.281974117641
+attr title  "Queuing time of packets, mean"
+scalar AerocomSystem.airCraft[1].fifo 	queueLength:max 	196
+attr title  "Statistic about queue's length, max"
+scalar AerocomSystem.airCraft[1].fifo 	queueLength:mean 	128.6980118216
+attr title  "Statistic about queue's length, mean"
+scalar AerocomSystem.airCraft[1].router 	numSwitch:sum 	11
+attr title  "Number of switch operation, sum"
+scalar AerocomSystem.airCraft[1].router 	queuingTime:mean 	132.05922275536
+attr title  "Queuing time of packets, mean"
+scalar AerocomSystem.airCraft[2].fifo 	queueLength:max 	100
+attr title  "Statistic about queue's length, max"
+scalar AerocomSystem.airCraft[2].fifo 	queueLength:mean 	42.636316337149
+attr title  "Statistic about queue's length, mean"
+scalar AerocomSystem.airCraft[2].router 	numSwitch:sum 	8
+attr title  "Number of switch operation, sum"
+scalar AerocomSystem.airCraft[2].router 	queuingTime:mean 	40.237580998571
+attr title  "Queuing time of packets, mean"
+scalar AerocomSystem.airCraft[3].fifo 	queueLength:max 	47
+attr title  "Statistic about queue's length, max"
+scalar AerocomSystem.airCraft[3].fifo 	queueLength:mean 	15.930063137445
+attr title  "Statistic about queue's length, mean"
+scalar AerocomSystem.airCraft[3].router 	numSwitch:sum 	9
+attr title  "Number of switch operation, sum"
+scalar AerocomSystem.airCraft[3].router 	queuingTime:mean 	14.714503794635
+attr title  "Queuing time of packets, mean"
+scalar AerocomSystem.airCraft[4].fifo 	queueLength:max 	141
+attr title  "Statistic about queue's length, max"
+scalar AerocomSystem.airCraft[4].fifo 	queueLength:mean 	75.288698446706
+attr title  "Statistic about queue's length, mean"
+scalar AerocomSystem.airCraft[4].router 	numSwitch:sum 	17
+attr title  "Number of switch operation, sum"
+scalar AerocomSystem.airCraft[4].router 	queuingTime:mean 	74.640547506673
+attr title  "Queuing time of packets, mean"
+scalar AerocomSystem.airCraft[5].fifo 	queueLength:max 	112
+attr title  "Statistic about queue's length, max"
+scalar AerocomSystem.airCraft[5].fifo 	queueLength:mean 	36.297959183673
+attr title  "Statistic about queue's length, mean"
+scalar AerocomSystem.airCraft[5].router 	numSwitch:sum 	11
+attr title  "Number of switch operation, sum"
+scalar AerocomSystem.airCraft[5].router 	queuingTime:mean 	33.229894066379
+attr title  "Queuing time of packets, mean"
+scalar AerocomSystem.airCraft[6].fifo 	queueLength:max 	65
+attr title  "Statistic about queue's length, max"
+scalar AerocomSystem.airCraft[6].fifo 	queueLength:mean 	33.089315997739
+attr title  "Statistic about queue's length, mean"
+scalar AerocomSystem.airCraft[6].router 	numSwitch:sum 	6
+attr title  "Number of switch operation, sum"
+scalar AerocomSystem.airCraft[6].router 	queuingTime:mean 	32.829444107942
+attr title  "Queuing time of packets, mean"
+scalar AerocomSystem.airCraft[7].fifo 	queueLength:max 	43
+attr title  "Statistic about queue's length, max"
+scalar AerocomSystem.airCraft[7].fifo 	queueLength:mean 	15.072668112798
+attr title  "Statistic about queue's length, mean"
+scalar AerocomSystem.airCraft[7].router 	numSwitch:sum 	11
+attr title  "Number of switch operation, sum"
+scalar AerocomSystem.airCraft[7].router 	queuingTime:mean 	15.621332423032
+attr title  "Queuing time of packets, mean"
+scalar AerocomSystem.airCraft[8].fifo 	queueLength:max 	77
+attr title  "Statistic about queue's length, max"
+scalar AerocomSystem.airCraft[8].fifo 	queueLength:mean 	34.204968944099
+attr title  "Statistic about queue's length, mean"
+scalar AerocomSystem.airCraft[8].router 	numSwitch:sum 	18
+attr title  "Number of switch operation, sum"
+scalar AerocomSystem.airCraft[8].router 	queuingTime:mean 	34.339814264425
+attr title  "Queuing time of packets, mean"
+scalar AerocomSystem.airCraft[9].fifo 	queueLength:max 	60
+attr title  "Statistic about queue's length, max"
+scalar AerocomSystem.airCraft[9].fifo 	queueLength:mean 	29.175167439464
+attr title  "Statistic about queue's length, mean"
+scalar AerocomSystem.airCraft[9].router 	numSwitch:sum 	10
+attr title  "Number of switch operation, sum"
+scalar AerocomSystem.airCraft[9].router 	queuingTime:mean 	28.349335689194
+attr title  "Queuing time of packets, mean"
+scalar AerocomSystem.airCraft[10].fifo 	queueLength:max 	98
+attr title  "Statistic about queue's length, max"
+scalar AerocomSystem.airCraft[10].fifo 	queueLength:mean 	32.704715969989
+attr title  "Statistic about queue's length, mean"
+scalar AerocomSystem.airCraft[10].router 	numSwitch:sum 	12
+attr title  "Number of switch operation, sum"
+scalar AerocomSystem.airCraft[10].router 	queuingTime:mean 	29.797424797775
+attr title  "Queuing time of packets, mean"
+scalar AerocomSystem.airCraft[11].fifo 	queueLength:max 	217
+attr title  "Statistic about queue's length, max"
+scalar AerocomSystem.airCraft[11].fifo 	queueLength:mean 	107.0435718128
+attr title  "Statistic about queue's length, mean"
+scalar AerocomSystem.airCraft[11].router 	numSwitch:sum 	12
+attr title  "Number of switch operation, sum"
+scalar AerocomSystem.airCraft[11].router 	queuingTime:mean 	100.72622084325
+attr title  "Queuing time of packets, mean"
+scalar AerocomSystem.airCraft[12].fifo 	queueLength:max 	96
+attr title  "Statistic about queue's length, max"
+scalar AerocomSystem.airCraft[12].fifo 	queueLength:mean 	62.63277693475
+attr title  "Statistic about queue's length, mean"
+scalar AerocomSystem.airCraft[12].router 	numSwitch:sum 	10
+attr title  "Number of switch operation, sum"
+scalar AerocomSystem.airCraft[12].router 	queuingTime:mean 	61.026343832568
+attr title  "Queuing time of packets, mean"
+scalar AerocomSystem.airCraft[13].fifo 	queueLength:max 	56
+attr title  "Statistic about queue's length, max"
+scalar AerocomSystem.airCraft[13].fifo 	queueLength:mean 	22.044316996872
+attr title  "Statistic about queue's length, mean"
+scalar AerocomSystem.airCraft[13].router 	numSwitch:sum 	8
+attr title  "Number of switch operation, sum"
+scalar AerocomSystem.airCraft[13].router 	queuingTime:mean 	19.725994731025
+attr title  "Queuing time of packets, mean"
+scalar AerocomSystem.airCraft[14].fifo 	queueLength:max 	174
+attr title  "Statistic about queue's length, max"
+scalar AerocomSystem.airCraft[14].fifo 	queueLength:mean 	113.71177410762
+attr title  "Statistic about queue's length, mean"
+scalar AerocomSystem.airCraft[14].router 	numSwitch:sum 	14
+attr title  "Number of switch operation, sum"
+scalar AerocomSystem.airCraft[14].router 	queuingTime:mean 	114.26098530573
+attr title  "Queuing time of packets, mean"
+scalar AerocomSystem.airCraft[15].fifo 	queueLength:max 	80
+attr title  "Statistic about queue's length, max"
+scalar AerocomSystem.airCraft[15].fifo 	queueLength:mean 	49.237545883587
+attr title  "Statistic about queue's length, mean"
+scalar AerocomSystem.airCraft[15].router 	numSwitch:sum 	7
+attr title  "Number of switch operation, sum"
+scalar AerocomSystem.airCraft[15].router 	queuingTime:mean 	50.980848983564
+attr title  "Queuing time of packets, mean"
+scalar AerocomSystem.airCraft[16].fifo 	queueLength:max 	49
+attr title  "Statistic about queue's length, max"
+scalar AerocomSystem.airCraft[16].fifo 	queueLength:mean 	18.163716814159
+attr title  "Statistic about queue's length, mean"
+scalar AerocomSystem.airCraft[16].router 	numSwitch:sum 	10
+attr title  "Number of switch operation, sum"
+scalar AerocomSystem.airCraft[16].router 	queuingTime:mean 	18.250091624326
+attr title  "Queuing time of packets, mean"
+scalar AerocomSystem.airCraft[17].fifo 	queueLength:max 	94
+attr title  "Statistic about queue's length, max"
+scalar AerocomSystem.airCraft[17].fifo 	queueLength:mean 	32.086366105378
+attr title  "Statistic about queue's length, mean"
+scalar AerocomSystem.airCraft[17].router 	numSwitch:sum 	9
+attr title  "Number of switch operation, sum"
+scalar AerocomSystem.airCraft[17].router 	queuingTime:mean 	28.720565054026
+attr title  "Queuing time of packets, mean"
+scalar AerocomSystem.airCraft[18].fifo 	queueLength:max 	52
+attr title  "Statistic about queue's length, max"
+scalar AerocomSystem.airCraft[18].fifo 	queueLength:mean 	17.630994447249
+attr title  "Statistic about queue's length, mean"
+scalar AerocomSystem.airCraft[18].router 	numSwitch:sum 	12
+attr title  "Number of switch operation, sum"
+scalar AerocomSystem.airCraft[18].router 	queuingTime:mean 	17.156691278901
+attr title  "Queuing time of packets, mean"
+scalar AerocomSystem.airCraft[19].fifo 	queueLength:max 	176
+attr title  "Statistic about queue's length, max"
+scalar AerocomSystem.airCraft[19].fifo 	queueLength:mean 	99.586968838527
+attr title  "Statistic about queue's length, mean"
+scalar AerocomSystem.airCraft[19].router 	numSwitch:sum 	12
+attr title  "Number of switch operation, sum"
+scalar AerocomSystem.airCraft[19].router 	queuingTime:mean 	96.978383989148
+attr title  "Queuing time of packets, mean"
+scalar AerocomSystem.airCraft[20].fifo 	queueLength:max 	111
+attr title  "Statistic about queue's length, max"
+scalar AerocomSystem.airCraft[20].fifo 	queueLength:mean 	54.703782631859
+attr title  "Statistic about queue's length, mean"
+scalar AerocomSystem.airCraft[20].router 	numSwitch:sum 	12
+attr title  "Number of switch operation, sum"
+scalar AerocomSystem.airCraft[20].router 	queuingTime:mean 	55.662150684902
+attr title  "Queuing time of packets, mean"
+scalar AerocomSystem.airCraft[21].fifo 	queueLength:max 	43
+attr title  "Statistic about queue's length, max"
+scalar AerocomSystem.airCraft[21].fifo 	queueLength:mean 	11.620559741658
+attr title  "Statistic about queue's length, mean"
+scalar AerocomSystem.airCraft[21].router 	numSwitch:sum 	9
+attr title  "Number of switch operation, sum"
+scalar AerocomSystem.airCraft[21].router 	queuingTime:mean 	11.06215693961
+attr title  "Queuing time of packets, mean"
+scalar AerocomSystem.airCraft[22].fifo 	queueLength:max 	94
+attr title  "Statistic about queue's length, max"
+scalar AerocomSystem.airCraft[22].fifo 	queueLength:mean 	50.276931447225
+attr title  "Statistic about queue's length, mean"
+scalar AerocomSystem.airCraft[22].router 	numSwitch:sum 	13
+attr title  "Number of switch operation, sum"
+scalar AerocomSystem.airCraft[22].router 	queuingTime:mean 	50.782813622318
+attr title  "Queuing time of packets, mean"
+scalar AerocomSystem.airCraft[23].fifo 	queueLength:max 	93
+attr title  "Statistic about queue's length, max"
+scalar AerocomSystem.airCraft[23].fifo 	queueLength:mean 	52.860759493671
+attr title  "Statistic about queue's length, mean"
+scalar AerocomSystem.airCraft[23].router 	numSwitch:sum 	5
+attr title  "Number of switch operation, sum"
+scalar AerocomSystem.airCraft[23].router 	queuingTime:mean 	53.030193934537
+attr title  "Queuing time of packets, mean"
+scalar AerocomSystem.airCraft[24].fifo 	queueLength:max 	231
+attr title  "Statistic about queue's length, max"
+scalar AerocomSystem.airCraft[24].fifo 	queueLength:mean 	118.37856758212
+attr title  "Statistic about queue's length, mean"
+scalar AerocomSystem.airCraft[24].router 	numSwitch:sum 	8
+attr title  "Number of switch operation, sum"
+scalar AerocomSystem.airCraft[24].router 	queuingTime:mean 	108.32573914343
+attr title  "Queuing time of packets, mean"
+scalar AerocomSystem.airCraft[25].fifo 	queueLength:max 	94
+attr title  "Statistic about queue's length, max"
+scalar AerocomSystem.airCraft[25].fifo 	queueLength:mean 	50.542227003765
+attr title  "Statistic about queue's length, mean"
+scalar AerocomSystem.airCraft[25].router 	numSwitch:sum 	13
+attr title  "Number of switch operation, sum"
+scalar AerocomSystem.airCraft[25].router 	queuingTime:mean 	53.664758933889
+attr title  "Queuing time of packets, mean"
+scalar AerocomSystem.airCraft[26].fifo 	queueLength:max 	73
+attr title  "Statistic about queue's length, max"
+scalar AerocomSystem.airCraft[26].fifo 	queueLength:mean 	20.299257567105
+attr title  "Statistic about queue's length, mean"
+scalar AerocomSystem.airCraft[26].router 	numSwitch:sum 	11
+attr title  "Number of switch operation, sum"
+scalar AerocomSystem.airCraft[26].router 	queuingTime:mean 	16.802384607059
+attr title  "Queuing time of packets, mean"
+scalar AerocomSystem.airCraft[27].fifo 	queueLength:max 	96
+attr title  "Statistic about queue's length, max"
+scalar AerocomSystem.airCraft[27].fifo 	queueLength:mean 	39.973137354283
+attr title  "Statistic about queue's length, mean"
+scalar AerocomSystem.airCraft[27].router 	numSwitch:sum 	5
+attr title  "Number of switch operation, sum"
+scalar AerocomSystem.airCraft[27].router 	queuingTime:mean 	39.767829423816
+attr title  "Queuing time of packets, mean"
+scalar AerocomSystem.airCraft[28].fifo 	queueLength:max 	107
+attr title  "Statistic about queue's length, max"
+scalar AerocomSystem.airCraft[28].fifo 	queueLength:mean 	58.884432717678
+attr title  "Statistic about queue's length, mean"
+scalar AerocomSystem.airCraft[28].router 	numSwitch:sum 	13
+attr title  "Number of switch operation, sum"
+scalar AerocomSystem.airCraft[28].router 	queuingTime:mean 	62.771939717045
+attr title  "Queuing time of packets, mean"
+scalar AerocomSystem.airCraft[29].fifo 	queueLength:max 	55
+attr title  "Statistic about queue's length, max"
+scalar AerocomSystem.airCraft[29].fifo 	queueLength:mean 	25.856415478615
+attr title  "Statistic about queue's length, mean"
+scalar AerocomSystem.airCraft[29].router 	numSwitch:sum 	14
+attr title  "Number of switch operation, sum"
+scalar AerocomSystem.airCraft[29].router 	queuingTime:mean 	24.574099631672
+attr title  "Queuing time of packets, mean"
+scalar AerocomSystem.airCraft[30].fifo 	queueLength:max 	146
+attr title  "Statistic about queue's length, max"
+scalar AerocomSystem.airCraft[30].fifo 	queueLength:mean 	90.149406688242
+attr title  "Statistic about queue's length, mean"
+scalar AerocomSystem.airCraft[30].router 	numSwitch:sum 	7
+attr title  "Number of switch operation, sum"
+scalar AerocomSystem.airCraft[30].router 	queuingTime:mean 	94.347294818701
+attr title  "Queuing time of packets, mean"
+scalar AerocomSystem.airCraft[31].fifo 	queueLength:max 	56
+attr title  "Statistic about queue's length, max"
+scalar AerocomSystem.airCraft[31].fifo 	queueLength:mean 	21.647561588738
+attr title  "Statistic about queue's length, mean"
+scalar AerocomSystem.airCraft[31].router 	numSwitch:sum 	6
+attr title  "Number of switch operation, sum"
+scalar AerocomSystem.airCraft[31].router 	queuingTime:mean 	20.640371292242
+attr title  "Queuing time of packets, mean"
+scalar AerocomSystem.airCraft[32].fifo 	queueLength:max 	95
+attr title  "Statistic about queue's length, max"
+scalar AerocomSystem.airCraft[32].fifo 	queueLength:mean 	59.059207225289
+attr title  "Statistic about queue's length, mean"
+scalar AerocomSystem.airCraft[32].router 	numSwitch:sum 	9
+attr title  "Number of switch operation, sum"
+scalar AerocomSystem.airCraft[32].router 	queuingTime:mean 	57.128104728282
+attr title  "Queuing time of packets, mean"
+scalar AerocomSystem.airCraft[33].fifo 	queueLength:max 	111
+attr title  "Statistic about queue's length, max"
+scalar AerocomSystem.airCraft[33].fifo 	queueLength:mean 	65.787703625854
+attr title  "Statistic about queue's length, mean"
+scalar AerocomSystem.airCraft[33].router 	numSwitch:sum 	10
+attr title  "Number of switch operation, sum"
+scalar AerocomSystem.airCraft[33].router 	queuingTime:mean 	67.895972533969
+attr title  "Queuing time of packets, mean"
+scalar AerocomSystem.airCraft[34].fifo 	queueLength:max 	64
+attr title  "Statistic about queue's length, max"
+scalar AerocomSystem.airCraft[34].fifo 	queueLength:mean 	26.757091284167
+attr title  "Statistic about queue's length, mean"
+scalar AerocomSystem.airCraft[34].router 	numSwitch:sum 	9
+attr title  "Number of switch operation, sum"
+scalar AerocomSystem.airCraft[34].router 	queuingTime:mean 	27.055884174401
+attr title  "Queuing time of packets, mean"
+scalar AerocomSystem.airCraft[35].fifo 	queueLength:max 	53
+attr title  "Statistic about queue's length, max"
+scalar AerocomSystem.airCraft[35].fifo 	queueLength:mean 	22.370860927152
+attr title  "Statistic about queue's length, mean"
+scalar AerocomSystem.airCraft[35].router 	numSwitch:sum 	10
+attr title  "Number of switch operation, sum"
+scalar AerocomSystem.airCraft[35].router 	queuingTime:mean 	21.888654644097
+attr title  "Queuing time of packets, mean"
+scalar AerocomSystem.airCraft[36].fifo 	queueLength:max 	90
+attr title  "Statistic about queue's length, max"
+scalar AerocomSystem.airCraft[36].fifo 	queueLength:mean 	30.103687867451
+attr title  "Statistic about queue's length, mean"
+scalar AerocomSystem.airCraft[36].router 	numSwitch:sum 	11
+attr title  "Number of switch operation, sum"
+scalar AerocomSystem.airCraft[36].router 	queuingTime:mean 	27.352256548329
+attr title  "Queuing time of packets, mean"
+scalar AerocomSystem.airCraft[37].fifo 	queueLength:max 	62
+attr title  "Statistic about queue's length, max"
+scalar AerocomSystem.airCraft[37].fifo 	queueLength:mean 	33.065539112051
+attr title  "Statistic about queue's length, mean"
+scalar AerocomSystem.airCraft[37].router 	numSwitch:sum 	13
+attr title  "Number of switch operation, sum"
+scalar AerocomSystem.airCraft[37].router 	queuingTime:mean 	33.249733083664
+attr title  "Queuing time of packets, mean"
+scalar AerocomSystem.airCraft[38].fifo 	queueLength:max 	122
+attr title  "Statistic about queue's length, max"
+scalar AerocomSystem.airCraft[38].fifo 	queueLength:mean 	62.192407696308
+attr title  "Statistic about queue's length, mean"
+scalar AerocomSystem.airCraft[38].router 	numSwitch:sum 	13
+attr title  "Number of switch operation, sum"
+scalar AerocomSystem.airCraft[38].router 	queuingTime:mean 	62.98535721749
+attr title  "Queuing time of packets, mean"
+scalar AerocomSystem.airCraft[39].fifo 	queueLength:max 	101
+attr title  "Statistic about queue's length, max"
+scalar AerocomSystem.airCraft[39].fifo 	queueLength:mean 	43.372413793103
+attr title  "Statistic about queue's length, mean"
+scalar AerocomSystem.airCraft[39].router 	numSwitch:sum 	12
+attr title  "Number of switch operation, sum"
+scalar AerocomSystem.airCraft[39].router 	queuingTime:mean 	43.400327234476
+attr title  "Queuing time of packets, mean"
+scalar AerocomSystem.airCraft[40].fifo 	queueLength:max 	69
+attr title  "Statistic about queue's length, max"
+scalar AerocomSystem.airCraft[40].fifo 	queueLength:mean 	22.769230769231
+attr title  "Statistic about queue's length, mean"
+scalar AerocomSystem.airCraft[40].router 	numSwitch:sum 	12
+attr title  "Number of switch operation, sum"
+scalar AerocomSystem.airCraft[40].router 	queuingTime:mean 	21.890683169969
+attr title  "Queuing time of packets, mean"
+scalar AerocomSystem.airCraft[41].fifo 	queueLength:max 	84
+attr title  "Statistic about queue's length, max"
+scalar AerocomSystem.airCraft[41].fifo 	queueLength:mean 	31.124476987448
+attr title  "Statistic about queue's length, mean"
+scalar AerocomSystem.airCraft[41].router 	numSwitch:sum 	11
+attr title  "Number of switch operation, sum"
+scalar AerocomSystem.airCraft[41].router 	queuingTime:mean 	30.00940106314
+attr title  "Queuing time of packets, mean"
+scalar AerocomSystem.airCraft[42].fifo 	queueLength:max 	75
+attr title  "Statistic about queue's length, max"
+scalar AerocomSystem.airCraft[42].fifo 	queueLength:mean 	24.878441558442
+attr title  "Statistic about queue's length, mean"
+scalar AerocomSystem.airCraft[42].router 	numSwitch:sum 	8
+attr title  "Number of switch operation, sum"
+scalar AerocomSystem.airCraft[42].router 	queuingTime:mean 	23.455902798834
+attr title  "Queuing time of packets, mean"
+scalar AerocomSystem.airCraft[43].fifo 	queueLength:max 	56
+attr title  "Statistic about queue's length, max"
+scalar AerocomSystem.airCraft[43].fifo 	queueLength:mean 	17.461775269369
+attr title  "Statistic about queue's length, mean"
+scalar AerocomSystem.airCraft[43].router 	numSwitch:sum 	3
+attr title  "Number of switch operation, sum"
+scalar AerocomSystem.airCraft[43].router 	queuingTime:mean 	16.797996243852
+attr title  "Queuing time of packets, mean"
+scalar AerocomSystem.airCraft[44].fifo 	queueLength:max 	123
+attr title  "Statistic about queue's length, max"
+scalar AerocomSystem.airCraft[44].fifo 	queueLength:mean 	48.287401574803
+attr title  "Statistic about queue's length, mean"
+scalar AerocomSystem.airCraft[44].router 	numSwitch:sum 	14
+attr title  "Number of switch operation, sum"
+scalar AerocomSystem.airCraft[44].router 	queuingTime:mean 	46.668605187674
+attr title  "Queuing time of packets, mean"
+scalar AerocomSystem.airCraft[45].fifo 	queueLength:max 	174
+attr title  "Statistic about queue's length, max"
+scalar AerocomSystem.airCraft[45].fifo 	queueLength:mean 	72.630809399478
+attr title  "Statistic about queue's length, mean"
+scalar AerocomSystem.airCraft[45].router 	numSwitch:sum 	10
+attr title  "Number of switch operation, sum"
+scalar AerocomSystem.airCraft[45].router 	queuingTime:mean 	68.167251470915
+attr title  "Queuing time of packets, mean"
+scalar AerocomSystem.airCraft[46].fifo 	queueLength:max 	87
+attr title  "Statistic about queue's length, max"
+scalar AerocomSystem.airCraft[46].fifo 	queueLength:mean 	35.931103344983
+attr title  "Statistic about queue's length, mean"
+scalar AerocomSystem.airCraft[46].router 	numSwitch:sum 	13
+attr title  "Number of switch operation, sum"
+scalar AerocomSystem.airCraft[46].router 	queuingTime:mean 	32.519855501221
+attr title  "Queuing time of packets, mean"
+scalar AerocomSystem.airCraft[47].fifo 	queueLength:max 	126
+attr title  "Statistic about queue's length, max"
+scalar AerocomSystem.airCraft[47].fifo 	queueLength:mean 	83.726804123711
+attr title  "Statistic about queue's length, mean"
+scalar AerocomSystem.airCraft[47].router 	numSwitch:sum 	13
+attr title  "Number of switch operation, sum"
+scalar AerocomSystem.airCraft[47].router 	queuingTime:mean 	83.963968387621
+attr title  "Queuing time of packets, mean"
+scalar AerocomSystem.airCraft[48].fifo 	queueLength:max 	113
+attr title  "Statistic about queue's length, max"
+scalar AerocomSystem.airCraft[48].fifo 	queueLength:mean 	48.245103229222
+attr title  "Statistic about queue's length, mean"
+scalar AerocomSystem.airCraft[48].router 	numSwitch:sum 	17
+attr title  "Number of switch operation, sum"
+scalar AerocomSystem.airCraft[48].router 	queuingTime:mean 	45.881373556362
+attr title  "Queuing time of packets, mean"
+scalar AerocomSystem.airCraft[49].fifo 	queueLength:max 	64
+attr title  "Statistic about queue's length, max"
+scalar AerocomSystem.airCraft[49].fifo 	queueLength:mean 	26.867647058824
+attr title  "Statistic about queue's length, mean"
+scalar AerocomSystem.airCraft[49].router 	numSwitch:sum 	3
+attr title  "Number of switch operation, sum"
+scalar AerocomSystem.airCraft[49].router 	queuingTime:mean 	26.532963084488
+attr title  "Queuing time of packets, mean"
+scalar AerocomSystem.controlTower 	responseTime:mean 	46.341673836911
+attr title  "Response time of arrived packets, mean"
+attr unit  s
