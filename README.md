@@ -1,5 +1,5 @@
 ####################################################################################
-# PECNS                                                                            #
+# PECSN                                                                            #
 # A project for the Performance Evaluation of Computer Systems and Networks course # 
 #                                                                                  #
 # Academic code for academic purposes only.                                        #
